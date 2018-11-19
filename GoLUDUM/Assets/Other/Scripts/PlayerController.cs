@@ -16,7 +16,6 @@ public class PlayerController : MonoBehaviour {
 	public GameObject model3D;
 
 	public GameObject cameraBase;
-	public GameObject cameraFar;
 
 	private Vector3 spawnPoint;
 
@@ -75,7 +74,6 @@ public class PlayerController : MonoBehaviour {
 		timeLastDeath = Time.time;
 		canMove = true;
 		cameraBase.SetActive (true);
-		cameraFar.SetActive (false);
 		model3D.SetActive (true);
 		Time.timeScale = 1;
 		source.PlayOneShot (spawnSound, 1.0f);
@@ -98,7 +96,6 @@ public class PlayerController : MonoBehaviour {
 				isAlive = false;
 				canMove = false;
 				cameraBase.SetActive (false);
-				cameraFar.SetActive (true);
 				model3D.SetActive (false);
 			}
 		}
@@ -109,7 +106,6 @@ public class PlayerController : MonoBehaviour {
 			source.PlayOneShot (spawnSound, 1.0f);
 			transform.position = spawnPoint;
 			cameraBase.SetActive (true);
-			cameraFar.SetActive (false);
 			model3D.SetActive (true);
 			timeLastDeath = Time.time;
 			cam.mouseLook = new Vector2 (0f, 0f);
@@ -150,7 +146,6 @@ public class PlayerController : MonoBehaviour {
 			isAlive = false;
 			canMove = false;
 			cameraBase.SetActive (false);
-			cameraFar.SetActive (true);
 			model3D.SetActive (false);
 		}
 	}

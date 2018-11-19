@@ -67,7 +67,6 @@ public class NextSceneWithTransition : MonoBehaviour {
 			meatBoy.rbPlayer.velocity = Vector3.zero;
 			Cursor.lockState = CursorLockMode.None;
 			Cursor.visible = true;
-			meatBoy.cameraFar.SetActive (true);
 			meatBoy.cameraBase.SetActive (false);
 
 			source.PlayOneShot (exploSound, 0.5f);
